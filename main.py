@@ -7,15 +7,11 @@ st.image("image/foto4_password.png")
 st.title("Gerador de senhas seguras")
 
 
-def Display_text():
-    st.subheader("Aponte a câmera do smartphone para ter acesso a senha ", divider="gray", width="content")
-
-
 def chosen_size(len):
     password = password_generator(len)
     st.code(password, language=None, width="content")
     qrcode = view_qrcode(password)
-    Display_text()
+    st.subheader("Aponte a câmera do smartphone para ter acesso a senha ", divider="gray", width="content")
     st.image("image/image_qrcode.png")
 
 
